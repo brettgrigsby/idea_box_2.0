@@ -1,0 +1,11 @@
+<li class="idea" id="<%= idea.id %>">
+  <h1 class="title"><%= idea.title %></h1>
+  <h2 class="body"><%= idea.body %></h2>
+  <h4 class="quality"><%= idea.quality %></h4>
+  <button class="upvote">upvote</button> - <button class="downvote">downvote</button>
+  <br>
+  <br>
+  <%= link_to "EDIT", edit_idea_path(idea) %> ---
+  <button class="delete-button">delete</button>
+  <hr>
+</li>

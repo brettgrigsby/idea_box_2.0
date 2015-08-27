@@ -1,0 +1,28 @@
+<h1>MYDEAS</h1>
+
+<hr>
+
+<%= form_for @idea, html: {id: "idea-form" } do |f| %>
+  Add an Idea -->
+  <%= f.label :title %>
+  <%= f.text_field :title, id: "title-input" %>
+
+  <%= f.label :body %>
+  <%= f.text_field :body, id: "body-input" %>
+
+  <%= f.submit id: "idea-create-button" %>
+<% end %>
+
+<hr>
+
+<form>
+  Filter Ideas:
+  <input type="text" id="idea-filter">
+</form>
+<hr>
+
+<ul id="ideas-list">
+  <% @ideas.each do |idea| %>
+    <%= render partial: "ideas/idea", locals: {idea: idea} %>
+  <% end %>
+</ul>
